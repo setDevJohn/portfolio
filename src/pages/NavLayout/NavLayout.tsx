@@ -1,15 +1,37 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import { MenuNavigation } from './components/MenuNavigation';
+import { navList } from './components/MenuNavigation/navList';
+import { 
+  BackgroundBlur,
+  ContentContainer,
+  LayoutContainer,
+  Container, 
+  MainContainer,
+  ProfileContainer, 
+  PageTitle
+} from './styles';
+
 
 export const NavLayout = () => {
-	const teste = { 
-		name: 'teste',
-		email: 'teste'
-	};
+  const location = useLocation();
+  const title = navList.find(({ path }) => path === location.pathname)?.label;
+  
+  return (
+    <Container>
+      <BackgroundBlur />
 
-	return (
-		<>
-			<h1> Nav </h1>
-			<Outlet/>
-		</>
-	);
+      <LayoutContainer>
+        <ProfileContainer />
+
+        <MainContainer>
+          <MenuNavigation />
+
+          <ContentContainer>
+            <PageTitle>{title}</PageTitle>
+            <Outlet/>
+          </ContentContainer>
+        </MainContainer>
+      </LayoutContainer>
+    </Container>
+  );
 };

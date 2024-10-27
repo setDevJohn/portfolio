@@ -6,6 +6,15 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    color: ${({ theme }) => theme.textColor};
+  }
+
+  body {
+    background-color: ${({ theme }) => theme.mainColor};
+  }
+
+  html {
+    font-size: 62.5%;
   }
 
   img {
