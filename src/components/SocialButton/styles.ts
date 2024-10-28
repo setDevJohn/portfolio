@@ -11,9 +11,17 @@ export const Button = styled.a`
   border-radius: 6px;
   border: none;
   box-shadow: 1px 2px 4px #0009;
-  height: 40px;
+  height: 42px;
   width: 100%;
+  transition: .4s ease-in-out;
   cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
 `;
 
-export const Icon = styled.img``;
+export const Icon = styled.img`
+  position: absolute;
+  left: 7px;
+`;

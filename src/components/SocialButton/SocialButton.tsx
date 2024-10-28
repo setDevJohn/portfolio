@@ -9,7 +9,7 @@ type SocialButtonProps = {
 export const SocialButton = ({ text, icon, url }: SocialButtonProps ) => {
   return ( 
     <Button href={url}>
-      <Icon src={icon} />
+      <Icon src={icon} alt="Ícone rede social"/>
       {text}
     </Button>
   );
