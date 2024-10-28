@@ -19,8 +19,8 @@ export const NavigationList = styled.ul`
 `;
 
 export const Item = styled.li<ItemProps>`
-  font-weight: ${({ $active }) => $active ? 600 : 400};
-  font-size: 1.8rem;
+  font-size: 1.9rem;
+  font-weight: ${({ $active }) => $active ? 500 : 400};
   color: ${({ $active, theme }) => $active && theme.contrastColor};
   cursor: pointer;
   transition: 0.4s ease-in-out;
