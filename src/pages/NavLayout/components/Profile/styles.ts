@@ -27,5 +27,5 @@ export const ProfileImage = styled.img`
 export const Title = styled.h2`
   font-size: 2.5rem;
   font-weight: 500;
-  margin: 18px 0 65px 0
+  margin: 18px 0 60px 0
 `;
