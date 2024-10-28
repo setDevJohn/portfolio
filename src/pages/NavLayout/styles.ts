@@ -6,7 +6,7 @@ export const Container = styled.div`
   z-index: 0;
   display: flex;
   flex-direction: column;
-  max-width: 1900px;
+  align-items: center;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
@@ -28,17 +28,8 @@ export const LayoutContainer = styled.div`
   display: flex;
   flex: 1;
   padding: 25px;
-`;
-
-export const ProfileContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-right: 30px;
-  background-color: ${({ theme }) => theme.cardColor};
-  border-radius: 15px;
-  border: ${({ theme }) => `1px solid ${theme.strokeColor}`};
-  min-width: 245px;
-  height: 100%;
+  max-width: 1900px;
+  width: 100%;
 `;
 
 export const MainContainer = styled.div`

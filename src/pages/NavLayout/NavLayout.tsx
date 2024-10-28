@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { MenuNavigation } from './components/MenuNavigation';
+import { MenuNavigation, Profile } from './components';
 import { navList } from './components/MenuNavigation/navList';
 import { 
   BackgroundBlur,
@@ -7,7 +7,6 @@ import {
   LayoutContainer,
   Container, 
   MainContainer,
-  ProfileContainer, 
   PageTitle
 } from './styles';
 
@@ -21,7 +20,7 @@ export const NavLayout = () => {
       <BackgroundBlur />
 
       <LayoutContainer>
-        <ProfileContainer />
+        <Profile />
 
         <MainContainer>
           <MenuNavigation />
