@@ -6,7 +6,7 @@ export const SocialMedia = () => {
   return (
     <SocialMediaList>
       {mediasList.map(({ label, icon, url }) => (
-        <Item>
+        <Item key={label}>
           <SocialButton text={label} icon={icon} url={url}/>
         </Item>
       ))}
