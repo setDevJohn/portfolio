@@ -26,7 +26,7 @@ export const NavLayout = () => {
           <MenuNavigation />
 
           <ContentContainer>
-            <PageTitle>{title}</PageTitle>
+            <PageTitle key={location.pathname}>{title}</PageTitle>
             <Outlet/>
           </ContentContainer>
         </MainContainer>
