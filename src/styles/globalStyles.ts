@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.5%;
+    font-weight: 400;
   }
 
   img {
