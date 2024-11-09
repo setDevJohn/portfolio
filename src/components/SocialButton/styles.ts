@@ -6,7 +6,7 @@ export const Button = styled.a`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.secondaryColor};
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
   border-radius: 6px;
   border: none;
