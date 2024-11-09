@@ -1,8 +1,19 @@
+import { useState } from 'react';
 import frontIcon from '@assets/icons/front.png';
 import backIcon from '@assets/icons/back.png';
 import infraIcon from '@assets/icons/infra.png';
-import { CardIcon, CardsContainer, CardServices, CardText, CardTextContainer, DescContainer, PageContainer, ServiceText, ServiceTitle, Title } from './styles';
-import { useState } from 'react';
+import { PageContainer } from '@styles/pageStyle';
+import { 
+  CardIcon, 
+  CardsContainer, 
+  CardServices, 
+  CardText, 
+  CardTextContainer, 
+  DescContainer, 
+  ServiceText, 
+  ServiceTitle, 
+  Title 
+} from './styles';
 
 export const Services = () => {
   const [selectedCard, setSelectedCard] = useState('Frontend');

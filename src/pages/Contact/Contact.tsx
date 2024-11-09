@@ -1,5 +1,6 @@
 import { SocialForm, SocialNav } from './components';
-import { PageContainer, SpanFooter } from './styles';
+import { PageContainer } from '@styles/pageStyle';
+import { SpanFooter } from './styles';
 
 export const Contact = () => (
   <PageContainer>

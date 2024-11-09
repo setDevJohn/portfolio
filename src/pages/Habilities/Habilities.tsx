@@ -3,7 +3,8 @@ import jsIcon from '@assets/images/javascript.png';
 import tsIcon from '@assets/images/typescript.png';
 import reactIcon from '@assets/images/react.png';
 import nodeIcon from '@assets/images/node.png';
-import { ImageContainer, PageContainer, SkillIcon, TextSpan } from './styles';
+import { PageContainer } from '@styles/pageStyle';
+import { ImageContainer, SkillIcon, TextSpan } from './styles';
 
 export const Habilities = () => {
   const imageList = [

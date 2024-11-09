@@ -15,14 +15,6 @@ const slideIn = keyframes`
   }
 `;
 
-export const PageContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  flex: 1;
-  padding: 15px 0;
-`;
 export const CardsContainer = styled.div`
   display: flex;
   justify-content: center;
