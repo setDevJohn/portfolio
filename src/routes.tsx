@@ -1,7 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { Services } from '@pages/Services';
-import { NavLayout } from '@pages/NavLayout';
-
+import {  NavLayout, Services, Portfolio, Habilities, About, Contact } from '@pages/index';
 
 export const AppRoutes = () => (
   <BrowserRouter>
@@ -9,6 +7,10 @@ export const AppRoutes = () => (
       <Route path="/" element={<NavLayout />}>
         <Route index element={<Navigate to="/services"/>} />
         <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/habilities" element={<Habilities />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
   </BrowserRouter>
