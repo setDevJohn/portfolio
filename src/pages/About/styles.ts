@@ -5,14 +5,6 @@ const slider = keyframes`
   to { transform: translateY(0)}
 `;
 
-export const PageContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  flex: 1;
-  padding: 15px 0;
-`;
 export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
@@ -70,25 +62,4 @@ export const TimeLineItem = styled.div`
     background-color: ${({ theme }) => theme.primaryColor};
     border: ${({ theme }) => `${theme.contrastColor} 3px solid`};
   }
-`;
-export const CertificationName = styled.p`
-  font-size: 1.5rem;
-  font-weight: 600;
-`;
-export const CompanyName = styled.p`
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: ${({ theme }) => theme.contrastColor};
-  margin-right: 5px;
-`;
-export const Date = styled.p`
-  font-size: 1.5rem;
-  font-weight: 500;
-`;
-export const TextSpan = styled.span`
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: ${({ theme }) => theme.contrastColor};
 `;
