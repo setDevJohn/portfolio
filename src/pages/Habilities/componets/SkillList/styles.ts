@@ -62,7 +62,7 @@ export const ProgressBar = styled.div<ProgressBarProps>`
 `;
 export const SpanProgress = styled.span`
   opacity: 0;
-  animation: ${opacityAnimation} 2s ease forwards;
+  animation: ${opacityAnimation} 1.2s ease forwards;
   animation-delay: 1s;
   color: #000;
   font-size: 1.2rem;
