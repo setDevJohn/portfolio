@@ -21,8 +21,12 @@ export const CarouselContainer = styled.div`
   animation: ${fadeIn} 0.6s ease-in-out forwards 0.3s;
   margin-top: 2%;
   width: 100%;
-  max-width: 630px;
+  max-width: 900px;
 
+  .slick-slide:not(.slick-center) .card-project {
+    filter: blur(5px);
+    opacity: 0.6;
+  }
   .slick-dots {
     bottom: -30px;
   }
@@ -47,6 +51,7 @@ export const ImageContainer = styled.div`
   width: 100%;
 `;
 export const CardProject = styled.div`
+  transition: 0.8s ease;
   padding: 0 25px ;
   width: 100%;
 `;

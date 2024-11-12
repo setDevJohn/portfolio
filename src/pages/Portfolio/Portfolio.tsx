@@ -26,7 +26,10 @@ export const Portfolio = () => {
     dots: true,
     infinite: true,
     speed: 1000,
+    centerMode: true,
+    centerPadding: '100px',
     slidesToShow: 1,
+    easing: 'ease',
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
@@ -42,6 +45,7 @@ export const Portfolio = () => {
           {projectList.map(({ name, path, stacks }) => (
             <CardProject 
               key={name} 
+              className="card-project"
               $active={selectedCard === name}
               onClick={() => setSelectedCard(name)}
             >

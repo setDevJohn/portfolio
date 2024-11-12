@@ -9,6 +9,7 @@ export const ProfileContainer = styled.div`
   border-radius: 15px;
   border: ${({ theme }) => `1px solid ${theme.strokeColor}`};
   padding: 22px;
+  min-width: 175px;
   height: 100%;
   
   /* width: 0px;
