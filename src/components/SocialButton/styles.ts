@@ -23,5 +23,6 @@ export const Button = styled.a`
 
 export const Icon = styled.img`
   position: absolute;
-  left: 7px;
+  width: 27px;
+  left: 9px;
 `;

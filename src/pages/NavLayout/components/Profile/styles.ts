@@ -9,8 +9,13 @@ export const ProfileContainer = styled.div`
   border-radius: 15px;
   border: ${({ theme }) => `1px solid ${theme.strokeColor}`};
   padding: 22px;
-  min-width: 245px;
   height: 100%;
+  
+  /* width: 0px;
+  padding: 0px;
+  overflow: hidden;
+  border: none;
+  margin: 0px; */
 `;
 
 export const ImageContainer = styled.div`
@@ -20,7 +25,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const ProfileImage = styled.img`
-  width: 220px;
+  width: 175px;
   height: 100%;
 `;
 
