@@ -9,13 +9,13 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 45px;
-  margin-top: 4%;
+  margin-top: 3%;
   width: 100%;
   max-width: 1000px;
 `;
 export const Photo = styled.img`
   width: 100%;
-  max-width: 235px;
+  max-width: 215px;
   border-radius: 10px;
 `;
 export const TextContainer = styled.div`
@@ -28,12 +28,12 @@ export const TextContainer = styled.div`
 export const Text = styled.p`
   text-align: justify;
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 `;
 export const AnimationContainer = styled.div`
   overflow: hidden;
   padding: 0 10px;
-  margin-top: 80px;
+  margin-top: 45px;
 `;
 export const TimeLineContainer = styled.div`
   display: flex;
