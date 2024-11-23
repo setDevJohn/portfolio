@@ -16,7 +16,7 @@ const ThemeColorProvider = ({ children } : ThemeProviderProps) => {
       cardColor: '#0D0C10f2',
       primaryColor: '#16151B',
       secondaryColor: '#191722',
-      strokeColor: '#131312',
+      strokeColor: '#141414',
     },
     light: {
       mainColor: '#F9F9F9',
