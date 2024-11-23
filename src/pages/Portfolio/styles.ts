@@ -76,7 +76,7 @@ export const InfoContainer = styled.div`
   width: 100%;
 `;
 export const CardTitle = styled.p`
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 500;
   margin-top: 3px;
   width: 100%;
@@ -92,7 +92,7 @@ export const SkillList = styled.ul`
   width: 100%;
 `;
 export const Skill = styled.li`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 `;
 export const ButtonContainer = styled.div`
@@ -103,107 +103,9 @@ export const PageButton = styled.a`
   display: flex;
   background-color: ${({ theme }) => theme.contrastColor};
   color: #000;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  font-weight: 500;
   box-shadow: 1px 2px 4px #0008;
   border-radius: 4px;
   padding: 3px 13px;
 `;
-
-
-// import styled, { css, keyframes } from 'styled-components';
-
-// type ActiveProps = {
-//   $active: boolean;
-// }
-
-// const fadeIn = keyframes`
-//   from {
-//     opacity: 0;
-//     transform: scale(0.95);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: scale(1);
-//   }
-// `;
-
-// export const CardList = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   gap: 20px 35px;
-//   max-width: 1250px;
-//   overflow: auto;
-// `;
-// export const CardProject = styled.div<ActiveProps>`
-//   display: flex ;
-//   flex-direction: column;
-//   gap: 10px;
-//   background-color: ${({ theme }) => theme.secondaryColor};
-//   border-radius: 10px;
-//   padding: 18px 20px;
-//   width: 280px;
-//   height: ${({ $active }) => $active ? '281px' : '237px'};
-//   transition: height 0.8s ease;
-//   overflow: hidden;
-// `;
-// export const ImageContainer = styled.div`
-//   position: relative;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   border-radius: 5px;
-//   width: 240px;
-//   height: 150px; 
-//   object-fit: contain;
-// `;
-// export const BackgroundFocus = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   z-index: 1;
-//   background-color: #0005;
-//   width: 100%;
-//   height: 100%;
-// `;
-// export const ProjectImage = styled.img`
-//   max-width: 100%;
-//   object-fit: cover;
-// `;
-// export const CardTitle = styled.p`
-//   font-size: 1.8rem;
-//   font-weight: 500;
-//   margin-top: 3px;
-//   width: 100%;
-// `;
-// export const SkillList = styled.ul`
-//   display: flex;
-//   justify-content: end;
-//   gap: 8px;
-//   width: 100%;
-// `;
-// export const Skill = styled.li`
-//   font-size: 1.2rem;
-//   font-weight: 500;
-// `;
-// export const ButtonContainer = styled.div<ActiveProps>`
-//   display: flex;
-//   justify-content: space-around;
-//   margin-top: 5px;
-//   width: 100%;
-//   opacity: 0;
-//   ${({ $active }) => $active && css`
-//     animation: ${fadeIn} 0.7s ease forwards 0.4s;
-//   `}
-// `;
-// export const PageButton = styled.a`
-//   display: flex;
-//   background-color: ${({ theme }) => theme.contrastColor};
-//   color: #000;
-//   font-size: 1.5rem;
-//   font-weight: 600;
-//   box-shadow: 1px 2px 4px #0008;
-//   border-radius: 4px;
-//   padding: 3px 13px;
-// `;

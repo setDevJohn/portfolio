@@ -18,8 +18,6 @@ import {
 export const About = () => (
   <PageContainer>
     <ImageContainer>
-      <Photo src={jhonyPhoto} alt="Image do Jhony"/>
-
       <TextContainer>
         <Text>
           Desenvolvedor Front-End com experiência desde 2022, atuando em projetos freelance e em um cargo recente como desenvolvedor junior. Especialista em React, TypeScript e JavaScript, com forte domínio na criação de interfaces dinâmicas e responsivas. Experiência sólida em integração com APIs. Comprometido em seguir as melhores práticas de desenvolvimento e entrega de soluções de alta qualidade.
@@ -31,6 +29,8 @@ export const About = () => (
           handleClick={() => {}}
         />
       </TextContainer>
+
+      <Photo src={jhonyPhoto} alt="Image do Jhony"/>
     </ImageContainer>
 
     <AnimationContainer>

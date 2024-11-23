@@ -9,7 +9,6 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 45px;
-  margin-top: 3%;
   width: 100%;
   max-width: 1000px;
 `;
@@ -21,14 +20,15 @@ export const Photo = styled.img`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: start;
   justify-content: end;
   gap: 30px;
 `;
 export const Text = styled.p`
   text-align: justify;
+  line-height: 26px;
   font-weight: 500;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 `;
 export const AnimationContainer = styled.div`
   overflow: hidden;
@@ -49,6 +49,7 @@ export const TimeLineItem = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  font-size: 1.6rem;
   gap: 5px;
 
   &::before {

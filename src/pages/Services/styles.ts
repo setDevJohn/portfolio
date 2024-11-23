@@ -51,6 +51,7 @@ export const Title = styled.h2`
   font-weight: 600;
 `;
 export const CardText = styled.p`
+  line-height: 18px;
   font-size: 1.4rem;
 `;
 export const CardIcon = styled.img``;
@@ -68,5 +69,6 @@ export const ServiceTitle = styled(Title)`
 `;
 export const ServiceText = styled.p`
   font-size: 1.8rem;
+  line-height: 26px;
   font-weight: 500;
 `;

@@ -31,7 +31,7 @@ export const Portfolio = () => {
     slidesToShow: 1,
     easing: 'ease',
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2500,
     nextArrow: <Icon $right src={rightArrow} alt="Próximo" />,
     prevArrow: <Icon $left src={leftArrow} alt="Anterior" />,

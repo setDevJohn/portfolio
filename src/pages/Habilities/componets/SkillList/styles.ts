@@ -43,9 +43,7 @@ export const SkillLabel = styled.p`
 export const ProgressContainer = styled.div`
   display: flex;
   width: 100%;
-  /* width: 300px; */
   height: 18px;
-  border-radius: 3px;
   overflow: hidden;
 `;
 export const ProgressBar = styled.div<ProgressBarProps>`
@@ -53,6 +51,7 @@ export const ProgressBar = styled.div<ProgressBarProps>`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.contrastColor};
+  border-radius: 3px;
   height: 100%;
   width: 0;
   ${({ $progress }) => css`
