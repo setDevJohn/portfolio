@@ -20,7 +20,7 @@ export const ProfileContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  background-color: ${({ theme }) => theme.mainColor};
+  background-color: ${({ theme }) => theme.primaryColor};
   border-radius: 50%;
   overflow: hidden;
 `;
