@@ -2,9 +2,9 @@ import { SocialMedia } from '../index';
 import profile from '@assets/images/animated-jhony.png';
 import { ImageContainer, ProfileContainer, ProfileImage, Title } from './styles';
 
-export const Profile = () => {
+export const Profile = ({ statusBar }: {statusBar: boolean}) => {
   return (
-    <ProfileContainer>
+    <ProfileContainer $statusBar={statusBar}>
       <ImageContainer>
         <ProfileImage src={profile} alt="Imagem John animado"/>
       </ImageContainer>

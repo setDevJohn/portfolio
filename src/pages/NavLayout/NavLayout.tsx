@@ -10,23 +10,27 @@ import {
   PageTitle
 } from './styles';
 
-
 export const NavLayout = () => {
   const location = useLocation();
   const title = navList.find(({ path }) => path === location.pathname)?.label;
-  
+  const statusBar = title !== 'Início';
+
   return (
     <Container>
       <BackgroundBlur />
 
       <LayoutContainer>
-        <Profile />
+        <Profile statusBar={statusBar}/>
 
         <MainContainer>
           <MenuNavigation />
 
           <ContentContainer>
-            <PageTitle key={location.pathname}>{title}</PageTitle>
+            {statusBar && (
+              <PageTitle key={location.pathname}>
+                {title}
+              </PageTitle>
+            )}
             <Outlet/>
           </ContentContainer>
         </MainContainer>

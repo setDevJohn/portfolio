@@ -1,22 +1,35 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const ProfileContainer = styled.div`
+type ProfileContainerProps = {
+  $statusBar: boolean
+}
+
+export const ProfileContainer = styled.div<ProfileContainerProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 30px;
   background-color: ${({ theme }) => theme.cardColor};
   border-radius: 15px;
-  border: ${({ theme }) => `1px solid ${theme.strokeColor}`};
-  padding: 22px;
-  min-width: 175px;
   height: 100%;
-  
-  /* width: 0px;
-  padding: 0px;
   overflow: hidden;
-  border: none;
-  margin: 0px; */
+  transition: all 0.4s ease;
+  ${({ $statusBar, theme }) => $statusBar ? ( 
+    css`
+      border: ${`1px solid ${theme.strokeColor}`};
+      width: 225px;
+      min-width: 225px;
+      padding: 22px;
+      margin-right: 30px;
+    ` 
+  ) : ( 
+    css`
+      border: none;
+      width: 0px;
+      min-width: 0px;
+      padding: 0px;
+      margin-right: 0px;
+    `
+  )}
 `;
 
 export const ImageContainer = styled.div`
@@ -27,7 +40,7 @@ export const ImageContainer = styled.div`
 
 export const ProfileImage = styled.img`
   width: 175px;
-  height: 100%;
+  height: 176px;
 `;
 
 export const Title = styled.h2`
