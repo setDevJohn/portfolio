@@ -5,6 +5,10 @@ type IconProps = {
   $right: boolean
 }
 
+type CarouselContainerProps = {
+  $width: number;
+}
+
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -15,13 +19,15 @@ const fadeIn = keyframes`
     transform: scale(1);
   }
 `;
-
-export const CarouselContainer = styled.div`
+export const CarouselContainer = styled.div.attrs<CarouselContainerProps>(({ $width }) => ({
+  style: {
+    maxWidth: $width < 1200 ? `${$width}px` : '900px',
+  },
+}))`
   opacity: 0;
   animation: ${fadeIn} 0.6s ease-in-out forwards 0.3s;
   margin-top: 2%;
   width: 100%;
-  max-width: 900px;
 
   .slick-slide:not(.slick-center) .card-project {
     filter: blur(5px);
@@ -31,13 +37,35 @@ export const CarouselContainer = styled.div`
     bottom: -30px;
   }
   .slick-dots li button:before {
-    color: ${({ theme }) => theme.contrastColor}; // Cor dos dots ativos
+    color: ${({ theme }) => theme.contrastColor};
     font-size: 9px;
   }
   .slick-dots li.slick-active button:before {
-    color: ${({ theme }) => theme.contrastColor}; // Cor dos dots ativos
+    color: ${({ theme }) => theme.contrastColor};
   }
 `;
+// export const CarouselContainer = styled.div<CarouselContainerProps>`
+//   opacity: 0;
+//   animation: ${fadeIn} 0.6s ease-in-out forwards 0.3s;
+//   margin-top: 2%;
+//   width: 100%;
+//   max-width: ${({ $width }) => $width < 1200 ? `${$width}px` : '900px'};
+
+//   .slick-slide:not(.slick-center) .card-project {
+//     filter: blur(5px);
+//     opacity: 0.6;
+//   }
+//   .slick-dots {
+//     bottom: -30px;
+//   }
+//   .slick-dots li button:before {
+//     color: ${({ theme }) => theme.contrastColor}; // Cor dos dots ativos
+//     font-size: 9px;
+//   }
+//   .slick-dots li.slick-active button:before {
+//     color: ${({ theme }) => theme.contrastColor}; // Cor dos dots ativos
+//   }
+// `;
 export const ImageContainer = styled.div`
   position: relative;
   display: flex;

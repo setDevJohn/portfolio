@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import { projectList } from './projectList';
 import { PageContainer } from '@styles/pageStyle';
@@ -21,13 +21,30 @@ import {
 
 export const Portfolio = () => {
   const [selectedCard, setSelectedCard] = useState('');
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // Atualiza o tamanho da janela dinamicamente
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup para evitar vazamentos de memória
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  console.log(windowWidth);
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 1000,
     centerMode: true,
-    centerPadding: '100px',
+    centerPadding: windowWidth < 1130 ? `${Math.max(0, (windowWidth - 1030))}px` : '100px',
     slidesToShow: 1,
     easing: 'ease',
     slidesToScroll: 1,
@@ -40,7 +57,7 @@ export const Portfolio = () => {
 
   return (
     <PageContainer>
-      <CarouselContainer>
+      <CarouselContainer $width={Math.max(0, (windowWidth - 350))}>
         <Slider {...settings} style={{ width: '100%' }}>
           {projectList.map(({ name, path, stacks }) => (
             <CardProject 

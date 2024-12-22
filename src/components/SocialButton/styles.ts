@@ -11,13 +11,13 @@ export const Button = styled.a`
   border-radius: 6px;
   border: none;
   box-shadow: 2px 2px 4px #0008;
-  height: 40px; 
+  height: 38px; 
   width: 100%;
   transition: .4s ease-in-out;
   cursor: pointer;
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
   }
 `;
 
