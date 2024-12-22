@@ -7,8 +7,8 @@ type ItemProps = {
 export const NavigationContainer = styled.header`
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
   width: 100%;
-  height: 45px;
 `;
 
 export const Nav = styled.nav``;

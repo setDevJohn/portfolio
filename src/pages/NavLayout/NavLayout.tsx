@@ -2,7 +2,6 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { MenuNavigation, Profile } from './components';
 import { navList } from './components/MenuNavigation/navList';
 import { 
-  BackgroundBlur,
   ContentContainer,
   LayoutContainer,
   Container, 
@@ -17,8 +16,6 @@ export const NavLayout = () => {
 
   return (
     <Container>
-      <BackgroundBlur />
-
       <LayoutContainer>
         <Profile statusBar={statusBar}/>
 

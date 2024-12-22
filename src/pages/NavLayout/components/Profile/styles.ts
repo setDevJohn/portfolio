@@ -8,32 +8,27 @@ export const ProfileContainer = styled.div<ProfileContainerProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${({ theme }) => theme.cardColor};
-  border-radius: 15px;
+  background-color: ${({ theme }) => theme.primaryColor};
   height: 100%;
   overflow: hidden;
   transition: all 0.4s ease;
-  ${({ $statusBar, theme }) => $statusBar ? ( 
+  ${({ $statusBar }) => $statusBar ? ( 
     css`
-      border: ${`1px solid ${theme.strokeColor}`};
       width: 225px;
       min-width: 225px;
       padding: 22px;
-      margin-right: 30px;
     ` 
   ) : ( 
     css`
-      border: none;
       width: 0px;
       min-width: 0px;
       padding: 0px;
-      margin-right: 0px;
     `
   )}
 `;
 
 export const ImageContainer = styled.div`
-  background-color: ${({ theme }) => theme.primaryColor};
+  background-color: ${({ theme }) => theme.mainColor};
   border-radius: 50%;
   overflow: hidden;
 `;

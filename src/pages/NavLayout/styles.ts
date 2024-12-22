@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import bgImage from '@assets/images/bg-image.jpg';
 
 const slideIn = keyframes`
   0% {
@@ -21,32 +20,18 @@ const widthTitle = keyframes`
 `;
 
 export const Container = styled.div`
-  position: relative;
-  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: ${({ theme }) => theme.mainColor};
   width: 100%;
   height: 100vh;
   margin: 0 auto;
 `;
 
-export const BackgroundBlur = styled.div`
-  z-index: -1;
-  position: absolute;
-  background-image: url(${bgImage});
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  filter: blur(3px);
-  width: 100%;
-  height: 100%;
-`;
-
 export const LayoutContainer = styled.div`
   display: flex;
   flex: 1;
-  padding: 25px;
   max-width: 1900px;
   width: 100%;
 `;
@@ -55,6 +40,7 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 20px;
   flex: 1;
 `;  
 
@@ -62,11 +48,8 @@ export const ContentContainer = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: ${({ theme }) => theme.cardColor};
-  border-radius: 10px;
-  border: ${({ theme }) => `1px solid ${theme.strokeColor}`};
+  padding: 15px;
   overflow: hidden;
-  padding: 35px 65px;
   width: 100%;
   height: 100%;
 `;

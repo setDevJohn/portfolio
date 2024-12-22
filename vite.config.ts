@@ -11,6 +11,7 @@ export default defineConfig({
       '@public': '/public',
       '@assets': '/src/assets',
       '@styles': '/src/styles',
+      '@context': '/src/context'
     },
   }
 });

@@ -10,8 +10,8 @@ export const Button = styled.a`
   font-weight: 500;
   border-radius: 6px;
   border: none;
-  box-shadow: 1px 2px 4px #0009;
-  height: 42px;
+  box-shadow: 2px 2px 4px #0008;
+  height: 40px; 
   width: 100%;
   transition: .4s ease-in-out;
   cursor: pointer;

@@ -21,10 +21,10 @@ export const FormContainer = styled.form`
   max-width: 500px;
 `;
 export const SocialInput = styled.input`
-  background-color: ${({ theme }) => theme.secondaryColor};
+  background-color: ${({ theme }) => theme.primaryColor};
   font-size: 1.7rem;
   border-radius: 7px;
-  box-shadow: 1px 2px 4px #0007;
+  box-shadow: 2px 2px 4px #0008;
   padding: 12px 19px;
   border: none;
   outline: none;
@@ -36,7 +36,7 @@ export const SocialInput = styled.input`
   }
 `;
 export const SocialTextArea = styled.textarea`
-  background-color: ${({ theme }) => theme.secondaryColor};
+  background-color: ${({ theme }) => theme.primaryColor};
   font-size: 1.7rem;
   border-radius: 7px;
   box-shadow: 1px 2px 4px #0007;

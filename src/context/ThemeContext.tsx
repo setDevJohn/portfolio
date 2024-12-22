@@ -10,19 +10,17 @@ type ThemeProviderProps = {
 const ThemeColorProvider = ({ children } : ThemeProviderProps) => {
   const themeColor = {
     dark : {
-      mainColor: '#0D0C10',
+      mainColor: '#070707',
       contrastColor: '#2AD883',
       textColor: '#FFFFFF',
-      cardColor: '#0D0C10f2',
-      primaryColor: '#16151B',
-      secondaryColor: '#191722',
+      primaryColor: '#101010',
+      secondaryColor: '#232323',
       strokeColor: '#141414',
     },
     light: {
       mainColor: '#F9F9F9',
       contrastColor: '#0073E6',
       textColor: '#1A1A1A',
-      cardColor: '#FFFFFF',
       primaryColor: '#E0E0E0',
       secondaryColor: '#CFCFCF',
       strokeColor: '#D1D1D1',

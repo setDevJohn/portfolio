@@ -69,7 +69,7 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: ${({ theme }) => theme.secondaryColor};
+  background-color: ${({ theme }) => theme.primaryColor};
   border-radius: 4px;
   padding: 10px 20px;
   margin: 0 auto;
@@ -105,7 +105,7 @@ export const PageButton = styled.a`
   color: #000;
   font-size: 1.6rem;
   font-weight: 500;
-  box-shadow: 1px 2px 4px #0008;
-  border-radius: 4px;
-  padding: 3px 13px;
+  box-shadow: 2px 2px 4px #0008;
+  border-radius: 5px;
+  padding: 4px 13px;
 `;
