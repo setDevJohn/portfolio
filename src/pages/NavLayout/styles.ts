@@ -48,7 +48,7 @@ export const ContentContainer = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 15px;
+  padding: 15px 25px;
   overflow: hidden;
   width: 100%;
   height: 100%;

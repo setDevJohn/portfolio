@@ -16,6 +16,8 @@ const ThemeColorProvider = ({ children } : ThemeProviderProps) => {
       primaryColor: '#101010',
       secondaryColor: '#232323',
       strokeColor: '#141414',
+      primaryFont: '"Poppins", serif',
+      secondaryFont:  '"DM Mono", serif',
     },
     light: {
       mainColor: '#F9F9F9',
@@ -24,6 +26,8 @@ const ThemeColorProvider = ({ children } : ThemeProviderProps) => {
       primaryColor: '#E0E0E0',
       secondaryColor: '#CFCFCF',
       strokeColor: '#D1D1D1',
+      primaryFont: '"Poppins", serif',
+      secondaryFont:  '"DM Mono", serif',
     },
   };
   const [theme, setTheme] = useState(themeColor.dark);

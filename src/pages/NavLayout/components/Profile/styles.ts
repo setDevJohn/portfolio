@@ -34,8 +34,8 @@ export const ImageContainer = styled.div`
 `;
 
 export const ProfileImage = styled.img`
-  width: 175px;
-  height: 176px;
+  width: 185px;
+  height: 180px;
 `;
 
 export const Title = styled.h2`

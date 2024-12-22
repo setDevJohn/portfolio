@@ -28,7 +28,7 @@ const animationStyles = (animationType: string) => {
 };
 
 export const TextSpan = styled.span`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 500;
   margin-top: 5%;
 `;

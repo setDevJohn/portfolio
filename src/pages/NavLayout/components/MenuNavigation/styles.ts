@@ -19,6 +19,7 @@ export const NavigationList = styled.ul`
 `;
 
 export const Item = styled.li<ItemProps>`
+  /* font-family: "Public Sans", serif; */
   font-size: 1.9rem;
   font-weight: ${({ $active }) => $active ? 500 : 400};
   color: ${({ $active, theme }) => $active && theme.contrastColor};
@@ -26,6 +27,6 @@ export const Item = styled.li<ItemProps>`
   transition: 0.4s ease-in-out;
 
   &:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
 `;
