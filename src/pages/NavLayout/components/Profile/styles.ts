@@ -11,6 +11,10 @@ export const ProfileContainer = styled.div`
   width: 225px;
   min-width: 225px;
   padding: 22px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ImageContainer = styled.div`

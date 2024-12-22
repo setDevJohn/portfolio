@@ -26,7 +26,7 @@ export const Portfolio = () => {
   // Atualiza o tamanho da janela dinamicamente
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      setWindowWidth(window.innerWidth < 768 ? window.innerWidth + 225  : window.innerWidth);
     };
 
     window.addEventListener('resize', handleResize);
