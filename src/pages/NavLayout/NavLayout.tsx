@@ -12,22 +12,19 @@ import {
 export const NavLayout = () => {
   const location = useLocation();
   const title = navList.find(({ path }) => path === location.pathname)?.label;
-  const statusBar = title !== 'Início';
 
   return (
     <Container>
       <LayoutContainer>
-        <Profile statusBar={statusBar}/>
+        <Profile/>
 
         <MainContainer>
           <MenuNavigation />
 
           <ContentContainer>
-            {statusBar && (
-              <PageTitle key={location.pathname}>
-                {title}
-              </PageTitle>
-            )}
+            <PageTitle key={location.pathname}>
+              {title}
+            </PageTitle>
             <Outlet/>
           </ContentContainer>
         </MainContainer>

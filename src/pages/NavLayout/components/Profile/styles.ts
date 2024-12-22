@@ -1,10 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-type ProfileContainerProps = {
-  $statusBar: boolean
-}
-
-export const ProfileContainer = styled.div<ProfileContainerProps>`
+export const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,19 +8,9 @@ export const ProfileContainer = styled.div<ProfileContainerProps>`
   height: 100%;
   overflow: hidden;
   transition: all 0.4s ease;
-  ${({ $statusBar }) => $statusBar ? ( 
-    css`
-      width: 225px;
-      min-width: 225px;
-      padding: 22px;
-    ` 
-  ) : ( 
-    css`
-      width: 0px;
-      min-width: 0px;
-      padding: 0px;
-    `
-  )}
+  width: 225px;
+  min-width: 225px;
+  padding: 22px;
 `;
 
 export const ImageContainer = styled.div`

@@ -37,8 +37,6 @@ export const Portfolio = () => {
     };
   }, []);
 
-  console.log(windowWidth);
-
   const settings = {
     dots: true,
     infinite: true,
