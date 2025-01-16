@@ -21,7 +21,7 @@ const fadeIn = keyframes`
 `;
 export const CarouselContainer = styled.div.attrs<CarouselContainerProps>(({ $width }) => ({
   style: {
-    maxWidth: $width < 1200 ? `${$width}px` : '900px',
+    maxWidth: $width < 1200 ? `${$width}px` : '1200px',
   },
 }))`
   opacity: 0;

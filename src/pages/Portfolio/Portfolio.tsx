@@ -42,7 +42,7 @@ export const Portfolio = () => {
     infinite: true,
     speed: 1000,
     centerMode: true,
-    centerPadding: windowWidth < 1130 ? `${Math.max(0, (windowWidth - 1030))}px` : '100px',
+    centerPadding: windowWidth < 1300 ? `${Math.max(0, (windowWidth - 1200))}px` : '100px',
     slidesToShow: 1,
     easing: 'ease',
     slidesToScroll: 1,
@@ -55,7 +55,7 @@ export const Portfolio = () => {
 
   return (
     <PageContainer>
-      <CarouselContainer $width={Math.max(0, (windowWidth - 350))}>
+      <CarouselContainer $width={Math.max(0, (windowWidth - 550))}>
         <Slider {...settings} style={{ width: '100%' }}>
           {projectList.map(({ name, path, stacks }) => (
             <CardProject 
