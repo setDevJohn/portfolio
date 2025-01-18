@@ -9,6 +9,7 @@ export const skillList = [
   { name: 'CSS', progress: 99 },
   { name: 'MySQL', progress: 79 },
   { name: 'Sass', progress: 89 },
+  { name: 'Prisma', progress: 79 },
   { name: 'Git', progress: 99 },
   { name: 'StyledComp', progress: 89 },
   { name: 'C#', progress: 50 },
