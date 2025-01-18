@@ -1,6 +1,8 @@
 import { FormEvent, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { toastError, toastSuccess, toastWarning } from 'utils/toastMessage';
 import { Button } from '@components/Button';
+import { inputsList } from './inputsList';
 import sendIcon from '@assets/icons/send.png';
 import { 
   ErrorSpan,
@@ -9,7 +11,6 @@ import {
   SocialInput, 
   SocialTextArea, 
 } from './styles';
-import { inputsList } from './inputsList';
 
 
 const defaultValues = {
@@ -20,6 +21,7 @@ const defaultValues = {
 export const SocialForm = () => {
   const [errors, setErros] = useState([]);
   const [formData, setFormData] = useState(defaultValues);
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (name: string, value: string) => {
     setErros(prev => prev.filter(error => error !== name));
@@ -33,7 +35,9 @@ export const SocialForm = () => {
       .filter((entrie => !entrie[1]))?.map((entrie) => entrie[0]);
     setErros(errorFields);
 
-    if (errorFields.length) return;
+    if (errorFields.length) return toastWarning('Preencha os campos corretamente');
+    
+    setLoading(true);
     
     const emailData = {
       from_name: formData.name,
@@ -51,10 +55,12 @@ export const SocialForm = () => {
       );
   
       setFormData(defaultValues);
-      alert('E-mail enviado com sucesso!');
+      toastSuccess('E-mail enviado com sucesso!');
     } catch (error) {
       console.error('Erro ao enviar o e-mail:', error);
-      alert('Ocorreu um erro ao enviar o e-mail.');
+      toastError('Ocorreu um erro ao enviar o e-mail.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -88,8 +94,9 @@ export const SocialForm = () => {
       
       <Button 
         text="Enviar"
-        icon={sendIcon}
         type="submit"
+        icon={sendIcon}
+        loading={loading}
         style={{ alignSelf: 'end' }}  
       />
 
