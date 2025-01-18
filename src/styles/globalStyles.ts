@@ -35,6 +35,12 @@ const GlobalStyle = createGlobalStyle`
   button {
     border: none;
   }
+
+  .custom-toast {
+    font-size: 14px;
+    font-weight: bold;
+    color: #515151; 
+  }
 `;
 
 export { GlobalStyle };
