@@ -5,9 +5,9 @@ import workana from '@assets/icons/workana.svg';
 import linkedin from '@assets/icons/linkedin.svg';
 
 export const mediasList = [
-  { label: 'GitHub', url: null, icon: github },
-  { label: 'Whatsapp', url: null, icon: whatsapp },
-  { label: 'Email', url: null, icon: email },
+  { label: 'GitHub', url: 'https://github.com/setdevjohn', icon: github },
+  { label: 'Whatsapp', url: 'https://wa.me/5511948127577', icon: whatsapp },
+  { label: 'Email', url: 'mailto:setdevjohn@gmail.com', icon: email },
   { label: 'Workana', url: null, icon: workana },
-  { label: 'LinkedIn', url: null, icon: linkedin }
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/jhony-freitas/', icon: linkedin }
 ];
