@@ -1,23 +1,31 @@
 import { CSSObject } from 'styled-components';
 import { ButtonContainer, ButtonIcon } from './styles';
+import { CircularProgress } from '@mui/material';
 
 type ButtonProps = {
   text: string
   icon: string
   type?: string
-  style: CSSObject
+  style?: CSSObject
+  loading?: boolean
   handleClick?: () => void
 }
 
-export const Button = ({ text, icon, type, style, handleClick }: ButtonProps) => {
+export const Button = ({ text, icon, type, style, loading, handleClick }: ButtonProps) => {
   return ( 
-    <ButtonContainer style={style} type={type || 'button'}>
+    <ButtonContainer 
+      style={style}
+      disabled={loading}
+      type={type || 'button'}
+      onClick={handleClick}
+    >
       {text}
-      <ButtonIcon 
-        src={icon} 
-        alt={`Ícone do botão de ${text}`}
-        onClick={handleClick}
-      />
+      { loading ? (
+        <CircularProgress size={24} />
+      ) : (
+        <ButtonIcon src={icon} alt={`Ícone do botão de ${text}`}/>
+      )}
+
     </ButtonContainer>
   );
 };
