@@ -1,8 +1,6 @@
-import { Button } from '@components/Button';
 import { CertificateItem } from './components';
 import { certificates } from './certificateList';
 import { PageContainer } from '@styles/pageStyle';
-import buttonIcon from '@assets/icons/download.png';
 import jhonyPhoto from '@assets/images/jhony-photo.jpg';
 import { 
   ImageContainer,
@@ -20,14 +18,8 @@ export const About = () => (
     <ImageContainer>
       <TextContainer>
         <Text>
-          Desenvolvedor Front-End com experiência desde 2022, atuando em projetos freelance e em um cargo recente como desenvolvedor junior. Especialista em React, TypeScript e JavaScript, com forte domínio na criação de interfaces dinâmicas e responsivas. Experiência sólida em integração com APIs. Comprometido em seguir as melhores práticas de desenvolvimento e entrega de soluções de alta qualidade.
+          Desenvolvedor Full Stack com experiência desde 2022, atuando em projetos freelance e como desenvolvedor júnior. Atualmente cursando Análise e Desenvolvimento de Sistemas, com conclusão prevista para 2025. Especialista em React, TypeScript e JavaScript, com forte domínio na criação de interfaces dinâmicas e responsivas e sólida experiência em integração com APIs. Conhecimento prático em tecnologias como Node.js, Express, Prisma e MySQL. Focado em criar soluções modernas e eficientes, com atenção à qualidade do código, experiência do usuário e as melhores práticas de desenvolvimento.
         </Text>
-
-        <Button 
-          text="Curriculo"
-          icon={buttonIcon}
-          handleClick={() => {}}
-        />
       </TextContainer>
 
       <Photo src={jhonyPhoto} alt="Image do Jhony"/>
