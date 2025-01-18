@@ -13,7 +13,7 @@ const ThemeColorProvider = ({ children } : ThemeProviderProps) => {
       mainColor: '#070707',
       contrastColor: '#2AD883',
       textColor: '#FFFFFF',
-      primaryColor: '#101010',
+      primaryColor: '#161616',
       secondaryColor: '#232323',
       strokeColor: '#141414',
       primaryFont: '"Poppins", serif',
