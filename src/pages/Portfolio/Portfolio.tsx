@@ -58,7 +58,7 @@ export const Portfolio = () => {
     <PageContainer>
       <CarouselContainer $width={Math.max(0, (windowWidth - 350))}>
         <Slider {...settings} style={{ width: '100%' }}>
-          {projectList.map(({ name, path, stacks }) => (
+          {projectList.map(({ path, name, repoLink, deployLink, stacks, }) => (
             <CardProject 
               key={name} 
               className="card-project"
@@ -80,9 +80,15 @@ export const Portfolio = () => {
                   </SkillList>
 
                   <ButtonContainer $active={selectedCard === name}>
-                    <PageButton href={path}> Repositório </PageButton>
+                    {repoLink && (
+                      <PageButton href={repoLink} target="_blank">
+                        Repositório
+                      </PageButton>
+                    )}
 
-                    <PageButton href={path}> Deploy </PageButton>
+                    <PageButton href={deployLink} target="_blank">
+                      Deploy
+                    </PageButton>
                   </ButtonContainer>
                 </CardFooter>
               </InfoContainer>
