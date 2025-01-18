@@ -26,7 +26,8 @@ export const Portfolio = () => {
   // Atualiza o tamanho da janela dinamicamente
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth < 768 ? window.innerWidth + 225  : window.innerWidth);
+      const windowWidth = window.innerWidth;
+      setWindowWidth(windowWidth < 768 ? windowWidth + 220 : windowWidth);
     };
 
     window.addEventListener('resize', handleResize);
@@ -55,7 +56,7 @@ export const Portfolio = () => {
 
   return (
     <PageContainer>
-      <CarouselContainer $width={Math.max(0, (windowWidth - 550))}>
+      <CarouselContainer $width={Math.max(0, (windowWidth - 350))}>
         <Slider {...settings} style={{ width: '100%' }}>
           {projectList.map(({ name, path, stacks }) => (
             <CardProject 
