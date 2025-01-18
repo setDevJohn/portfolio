@@ -5,6 +5,10 @@ type IconProps = {
   $right: boolean
 }
 
+type SkillProps = {
+  $color: string
+}
+
 type CarouselContainerProps = {
   $width: number;
 }
@@ -44,28 +48,7 @@ export const CarouselContainer = styled.div.attrs<CarouselContainerProps>(({ $wi
     color: ${({ theme }) => theme.contrastColor};
   }
 `;
-// export const CarouselContainer = styled.div<CarouselContainerProps>`
-//   opacity: 0;
-//   animation: ${fadeIn} 0.6s ease-in-out forwards 0.3s;
-//   margin-top: 2%;
-//   width: 100%;
-//   max-width: ${({ $width }) => $width < 1200 ? `${$width}px` : '900px'};
 
-//   .slick-slide:not(.slick-center) .card-project {
-//     filter: blur(5px);
-//     opacity: 0.6;
-//   }
-//   .slick-dots {
-//     bottom: -30px;
-//   }
-//   .slick-dots li button:before {
-//     color: ${({ theme }) => theme.contrastColor}; // Cor dos dots ativos
-//     font-size: 9px;
-//   }
-//   .slick-dots li.slick-active button:before {
-//     color: ${({ theme }) => theme.contrastColor}; // Cor dos dots ativos
-//   }
-// `;
 export const ImageContainer = styled.div`
   position: relative;
   display: flex;
@@ -119,9 +102,10 @@ export const SkillList = styled.ul`
   gap: 8px;
   width: 100%;
 `;
-export const Skill = styled.li`
+export const Skill = styled.li<SkillProps>`
   font-size: 1.5rem;
   font-weight: 500;
+  color: ${({ $color }) => $color};
 `;
 export const ButtonContainer = styled.div`
   display: flex;
