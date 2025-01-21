@@ -69,6 +69,7 @@ export const ServiceTitle = styled(Title)`
 `;
 export const ServiceText = styled.p`
   font-size: 1.8rem;
-  line-height: 26px;
+  text-align: justify;
+  line-height: 25px;
   font-weight: 500;
 `;
