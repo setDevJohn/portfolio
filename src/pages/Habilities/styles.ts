@@ -1,3 +1,4 @@
+import { sizes } from '@styles/mediaSizes';
 import styled, { css, keyframes } from 'styled-components';
 
 type SkillIconProps = {
@@ -31,6 +32,10 @@ export const TextSpan = styled.span`
   font-size: 1.8rem;
   font-weight: 500;
   margin-top: 5%;
+
+  @media (${sizes.mobile}) {
+    margin-top: 10%;
+  }
 `;
 export const ImageContainer = styled.div`
   display: flex;
@@ -38,6 +43,11 @@ export const ImageContainer = styled.div`
   align-items: center;
   gap: 70px;
   margin: 21px 0 90px 0;
+
+  @media (${sizes.mobile}) {
+    gap: 25px;
+    margin: 21px 0 70px 0;
+  }
 `;
 export const SkillIcon = styled.img<SkillIconProps>`
   height: 60px;
@@ -46,5 +56,9 @@ export const SkillIcon = styled.img<SkillIconProps>`
   &:hover {
     transform: translateY(-5px);
     cursor: pointer;
+  }
+
+  @media (${sizes.mobile}) {
+    height: 40px;
   }
 `;

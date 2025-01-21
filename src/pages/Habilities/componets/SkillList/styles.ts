@@ -1,3 +1,4 @@
+import { sizes } from '@styles/mediaSizes';
 import styled, { css, keyframes } from 'styled-components';
 
 type ProgressBarProps = {
@@ -27,6 +28,10 @@ export const SkillsContainer = styled.div`
   gap: 6px 30px;
   width: 100%;
   max-width: 855px;
+
+  @media (${sizes.mobile}) {
+    grid-template-columns: auto;
+  }
 `;
 export const Skill = styled.div`
   justify-items: end;

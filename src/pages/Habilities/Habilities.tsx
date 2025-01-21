@@ -20,6 +20,7 @@ export const Habilities = () => {
       <ImageContainer>
         {imageList.map(({ path, name, animation }) => (
           <SkillIcon 
+            key={name}
             src={path} 
             $animation={animation}
             alt={`Ícone do ${name}`}
