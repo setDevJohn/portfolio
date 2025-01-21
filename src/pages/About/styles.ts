@@ -1,3 +1,4 @@
+import { sizes } from '@styles/mediaSizes';
 import styled, { keyframes } from 'styled-components';
 
 const slider = keyframes`
@@ -11,22 +12,23 @@ export const ImageContainer = styled.div`
   gap: 45px;
   width: 100%;
   max-width: 1000px;
+
+  @media (${sizes.mobile}) {
+    flex-direction: column-reverse;
+  }
 `;
 export const Photo = styled.img`
   width: 100%;
   max-width: 215px;
   border-radius: 10px;
-`;
-export const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: end;
-  gap: 30px;
+
+  @media (${sizes.mobile}) {
+    margin-top: 40px;
+  }
 `;
 export const Text = styled.p`
   text-align: justify;
-  line-height: 26px;
+  line-height: 25px;
   font-weight: 500;
   font-size: 1.8rem;
 `;
@@ -62,5 +64,9 @@ export const TimeLineItem = styled.div`
     border-radius: 50%;
     background-color: ${({ theme }) => theme.mainColor};
     border: ${({ theme }) => `${theme.contrastColor} 3px solid`};
+  }
+
+  @media (${sizes.mobile}) {
+    flex-wrap: wrap;
   }
 `;

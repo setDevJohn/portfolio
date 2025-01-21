@@ -17,7 +17,7 @@ type CertificateType = {
 export const CertificateItem = ({ certificate }: CertificateType) => (
   <>
     <CertificationName>{certificate.certification}</CertificationName>
-    <TextSpan> - </TextSpan> 
+    <TextSpan $mobileHidden> - </TextSpan> 
     <CompanyName>{certificate.company}</CompanyName>
     <Date>
       {certificate.initDate}

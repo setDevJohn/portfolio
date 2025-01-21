@@ -6,7 +6,6 @@ import {
   ImageContainer,
   Photo,
   Text,
-  TextContainer,
   AnimationContainer,
   TimeLineContainer,
   TimeLineItem
@@ -16,11 +15,9 @@ import {
 export const About = () => (
   <PageContainer>
     <ImageContainer>
-      <TextContainer>
-        <Text>
-          Desenvolvedor Full Stack com experiência desde 2022, atuando em projetos freelance e como desenvolvedor júnior. Atualmente cursando Análise e Desenvolvimento de Sistemas, com conclusão prevista para 2025. Especialista em React, TypeScript e JavaScript, com forte domínio na criação de interfaces dinâmicas e responsivas e sólida experiência em integração com APIs. Conhecimento prático em tecnologias como Node.js, Express, Prisma e MySQL. Focado em criar soluções modernas e eficientes, com atenção à qualidade do código, experiência do usuário e as melhores práticas de desenvolvimento.
-        </Text>
-      </TextContainer>
+      <Text>
+        Desenvolvedor Full Stack com experiência desde 2022, atuando em projetos freelance e como desenvolvedor júnior. Atualmente cursando Análise e Desenvolvimento de Sistemas, com conclusão prevista para 2025. Especialista em React, TypeScript e JavaScript, com forte domínio na criação de interfaces dinâmicas e responsivas e sólida experiência em integração com APIs. Conhecimento prático em tecnologias como Node.js, Express, Prisma e MySQL. Focado em criar soluções modernas e eficientes, com atenção à qualidade do código, experiência do usuário e as melhores práticas de desenvolvimento.
+      </Text>
 
       <Photo src={jhonyPhoto} alt="Image do Jhony"/>
     </ImageContainer>

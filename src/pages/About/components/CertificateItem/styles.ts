@@ -1,4 +1,9 @@
+import { sizes } from '@styles/mediaSizes';
 import styled from 'styled-components';
+
+type TextSpanProps = {
+  $mobileHidden: boolean;
+}
 
 export const CertificationName = styled.p`
   font-weight: 600;
@@ -13,7 +18,11 @@ export const CompanyName = styled.p`
 export const Date = styled.p`
   font-weight: 500;
 `;
-export const TextSpan = styled.span`
+export const TextSpan = styled.span<TextSpanProps>`
   font-weight: 500;
   color: ${({ theme }) => theme.contrastColor};
+
+  @media (${sizes.mobile}) {
+    display: ${({ $mobileHidden }) => $mobileHidden && 'none'};
+  }
 `;
