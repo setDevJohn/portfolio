@@ -1,3 +1,4 @@
+import { sizes } from '@styles/mediaSizes';
 import styled, { keyframes } from 'styled-components';
 
 const opacity = keyframes`
@@ -18,6 +19,10 @@ export const SocialContainer = styled.div`
   margin-top: 3%;
   width: 100%;
   max-width: 350px;
+
+  @media (${sizes.mobile}) {
+    margin-top: 10%;
+  }
 `;
 export const SocialTitle = styled.h2`
   font-weight: 500;
