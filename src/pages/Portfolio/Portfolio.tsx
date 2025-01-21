@@ -27,7 +27,13 @@ export const Portfolio = () => {
   useEffect(() => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
-      setWindowWidth(windowWidth < 768 ? windowWidth + 220 : windowWidth);
+      const windowUpdated = () => {
+        if (windowWidth > 768) return windowWidth;
+        if (windowWidth > 458 && windowWidth < 768) return windowWidth + 220;
+        return windowWidth + 350;
+      };
+      
+      setWindowWidth(windowUpdated());
     };
 
     window.addEventListener('resize', handleResize);

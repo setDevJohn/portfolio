@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { sizes } from '@styles/mediaSizes';
 
 type IconProps = {
   $left: boolean
@@ -47,6 +48,10 @@ export const CarouselContainer = styled.div.attrs<CarouselContainerProps>(({ $wi
   .slick-dots li.slick-active button:before {
     color: ${({ theme }) => theme.contrastColor};
   }
+
+  @media (${sizes.mobile}) {
+    margin-top: 10%;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -91,11 +96,21 @@ export const CardTitle = styled.p`
   font-weight: 500;
   margin-top: 3px;
   width: 100%;
+
+  @media (${sizes.mobile}) {
+    font-size: 1.7rem;
+  }
 `;
 export const CardFooter = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media (${sizes.mobile}) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 `;
 export const SkillList = styled.ul`
   display: flex;
@@ -120,4 +135,9 @@ export const PageButton = styled.a`
   box-shadow: 2px 2px 4px #0008;
   border-radius: 5px;
   padding: 4px 13px;
+
+  @media (${sizes.mobile}) {
+    font-size: 1.5rem;
+    padding: 3px 7px;
+  }
 `;
