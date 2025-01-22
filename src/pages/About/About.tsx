@@ -1,7 +1,7 @@
 import { CertificateItem } from './components';
 import { certificates } from './certificateList';
 import { PageContainer } from '@styles/pageStyle';
-import jhonyPhoto from '@assets/images/jhony-photo.jpg';
+import jhonyPhoto from '@assets/images/about-jhony-photo.jpg';
 import { 
   ImageContainer,
   Photo,
