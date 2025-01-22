@@ -30,10 +30,10 @@ export const SocialTitle = styled.h2`
 `;
 export const SocialList = styled.nav`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 22px;
+  gap: 30px;
 `;
 export const SocialLink = styled.a`
   animation: 
