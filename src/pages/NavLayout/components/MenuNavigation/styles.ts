@@ -31,7 +31,7 @@ export const Icon = styled.img`
 
 export const Nav = styled.nav<NavProps>`
   @media (${sizes.mobile}) {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     inset: 0;
     display: flex;
