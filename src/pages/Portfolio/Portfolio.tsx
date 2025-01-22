@@ -36,6 +36,8 @@ export const Portfolio = () => {
       setWindowWidth(windowUpdated());
     };
 
+    handleResize();
+
     window.addEventListener('resize', handleResize);
 
     // Cleanup para evitar vazamentos de memória
@@ -64,42 +66,53 @@ export const Portfolio = () => {
     <PageContainer>
       <CarouselContainer $width={Math.max(0, (windowWidth - 350))}>
         <Slider {...settings} style={{ width: '100%' }}>
-          {projectList.map(({ path, name, repoLink, deployLink, stacks, }) => (
-            <CardProject 
-              key={name} 
-              className="card-project"
-              $active={selectedCard === name}
-              onClick={() => setSelectedCard(name)}
-            >
-              <ImageContainer>
-                <ProjectImage src={path} alt={`project ${name}`}/>
-              </ImageContainer>
+          {projectList.map((curProduct) => { 
+            const { 
+              path,
+              name,
+              repoLink,
+              deployLink,
+              stacks,
+              mobile
+            } = curProduct; 
 
-              <InfoContainer>
-                <CardTitle>{name}</CardTitle>
+            return (
+              <CardProject 
+                key={name} 
+                className="card-project"
+                $active={selectedCard === name}
+                onClick={() => setSelectedCard(name)}
+              >
+                <ImageContainer $mobileSrc={mobile}>
+                  <ProjectImage src={path} alt={`project ${name}`}/>
+                </ImageContainer>
 
-                <CardFooter>
-                  <SkillList>
-                    {stacks.map(({ stack, color }) => (
-                      <Skill $color={color}>{stack}</Skill>
-                    ))}
-                  </SkillList>
+                <InfoContainer>
+                  <CardTitle>{name}</CardTitle>
 
-                  <ButtonContainer $active={selectedCard === name}>
-                    {repoLink && (
-                      <PageButton href={repoLink} target="_blank">
+                  <CardFooter>
+                    <SkillList>
+                      {stacks.map(({ stack, color }) => (
+                        <Skill $color={color}>{stack}</Skill>
+                      ))}
+                    </SkillList>
+
+                    <ButtonContainer $active={selectedCard === name}>
+                      {repoLink && (
+                        <PageButton href={repoLink} target="_blank">
                         Repositório
-                      </PageButton>
-                    )}
+                        </PageButton>
+                      )}
 
-                    <PageButton href={deployLink} target="_blank">
+                      <PageButton href={deployLink} target="_blank">
                       Deploy
-                    </PageButton>
-                  </ButtonContainer>
-                </CardFooter>
-              </InfoContainer>
-            </CardProject>
-          ))}
+                      </PageButton>
+                    </ButtonContainer>
+                  </CardFooter>
+                </InfoContainer>
+              </CardProject>
+            );
+          })}
         </Slider>
       </CarouselContainer>
     </PageContainer>  

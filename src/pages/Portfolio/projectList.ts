@@ -4,10 +4,17 @@ import githubProfile from '@assets/images/github-profile.png';
 import lavandinha from '@assets/images/lavandinha.png';
 import pokedex from '@assets/images/pokedex.png';
 import codeCafe from '@assets/images/code-cafe.png';
+import ipAddressTrackerMobile from '@assets/images/ip-address-tracker-mobile.png';
+import interactiveFormMobile from '@assets/images/interactive-form-mobile.png';
+import githubProfileMobile from '@assets/images/github-profile-mobile.png';
+import lavandinhaMobile from '@assets/images/lavandinha-mobile.png';
+import pokedexMobile from '@assets/images/pokedex-mobile.png';
+import codeCafeMobile from '@assets/images/code-cafe-mobile.png';
  
 export const projectList = [
   {
     path: ipAddressTracker,
+    mobile: ipAddressTrackerMobile,
     name: 'Rastreador de endereço de IP',
     repoLink: 'https://github.com/setDevJohn/ip-address-tracker',
     deployLink: 'https://ip-address-tracker-jhonyfreitasdev.vercel.app/',
@@ -19,6 +26,7 @@ export const projectList = [
   },
   {
     path: interactiveForm,
+    mobile: interactiveFormMobile,
     name: 'Formulário interativo',
     repoLink: 'https://github.com/setDevJohn/interactive-card-form',
     deployLink: 'https://setdevjohn.github.io/interactive-card-form/',
@@ -30,6 +38,7 @@ export const projectList = [
   },
   {
     path: githubProfile,
+    mobile: githubProfileMobile,
     name: 'Requisição de perfil do GitHub',
     repoLink: 'https://github.com/setDevJohn/github-profile',
     deployLink: 'https://setdevjohn.github.io/github-profile/',
@@ -41,6 +50,7 @@ export const projectList = [
   },
   {
     path: lavandinha,
+    mobile: lavandinhaMobile,
     name: 'Lavandinha bordados',
     repoLink: null,
     deployLink: 'https://lavandinha-bordados.vercel.app/',
@@ -52,6 +62,7 @@ export const projectList = [
   },
   {
     path: pokedex,
+    mobile: pokedexMobile,
     name: 'Pokedex',
     repoLink: 'https://github.com/setDevJohn/pokedex',
     deployLink: 'https://pokedex-alpha-mauve.vercel.app/',
@@ -64,6 +75,7 @@ export const projectList = [
   },
   {
     path: codeCafe,
+    mobile: codeCafeMobile,
     name: 'Code Café',
     repoLink: 'https://github.com/setDevJohn/code-cafe',
     deployLink: 'https://setdevjohn.github.io/code-cafe/',

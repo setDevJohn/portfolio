@@ -10,6 +10,10 @@ type SkillProps = {
   $color: string
 }
 
+type ImageContainerProps = {
+  $mobileSrc: string
+}
+
 type CarouselContainerProps = {
   $width: number;
 }
@@ -54,7 +58,7 @@ export const CarouselContainer = styled.div.attrs<CarouselContainerProps>(({ $wi
   }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.div<ImageContainerProps>`
   position: relative;
   display: flex;
   justify-content: center;
@@ -65,6 +69,13 @@ export const ImageContainer = styled.div`
   overflow: hidden;
   margin: 0 auto 10px auto;
   width: 100%;
+
+  @media (max-width: 458px) {
+    img {
+      content: url(${({ $mobileSrc }) => $mobileSrc});
+      max-height: 400px;
+    }
+  }
 `;
 export const CardProject = styled.div`
   transition: 0.8s ease;
