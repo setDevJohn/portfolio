@@ -63,7 +63,7 @@ export const Portfolio = () => {
   };
 
   return (
-    <PageContainer>
+    <PageContainer id="portfolio">
       <CarouselContainer $width={Math.max(0, (windowWidth - 350))}>
         <Slider {...settings} style={{ width: '100%' }}>
           {projectList.map((curProduct) => { 

@@ -9,8 +9,13 @@ type NavProps = {
 }
 
 export const NavigationContainer = styled.header`
+  position: fixed;
+  z-index: 1;
   display: flex;
   justify-content: center;
+  background-color: ${({ theme }) => theme.primaryColor};
+  box-shadow: 0px 2px 10px 4px #0004;
+  padding: 15px 25px;
   margin-bottom: 15px;
   width: 100%;
 
@@ -57,7 +62,7 @@ export const NavigationList = styled.ul`
 `;
 
 export const Item = styled.li<ItemProps>`
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: ${({ $active }) => $active ? 500 : 400};
   color: ${({ $active, theme }) => $active && theme.contrastColor};
   cursor: pointer;

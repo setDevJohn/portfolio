@@ -24,33 +24,16 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: ${({ theme }) => theme.mainColor};
+  margin: 0 auto;
   width: 100%;
   height: 100vh;
-  margin: 0 auto;
 `;
-
-export const LayoutContainer = styled.div`
-  display: flex;
-  flex: 1;
-  max-width: 1900px;
-  width: 100%;
-`;
-
-export const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 20px;
-  flex: 1;
-`;  
 
 export const ContentContainer = styled.main`
   display: flex;
   flex-direction: column;
+  gap: 120px;
   flex: 1;
-  padding: 15px 25px;
-  overflow: hidden;
-  width: 100%;
   height: 100%;
 `;
 

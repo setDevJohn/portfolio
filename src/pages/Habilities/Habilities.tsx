@@ -15,7 +15,7 @@ export const Habilities = () => {
   ];
 
   return (
-    <PageContainer>
+    <PageContainer $contrast id="habilities">
       <TextSpan>Mais usadas</TextSpan>
       <ImageContainer>
         {imageList.map(({ path, name, animation }) => (

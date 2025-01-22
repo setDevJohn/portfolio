@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { navList } from './navList';
 import menuIcon from '@assets/icons/menu.svg';
 import closeIcon from '@assets/icons/close.svg';
@@ -8,14 +8,15 @@ import { Icon, Item, Nav, NavigationContainer, NavigationList } from './styles';
 export const MenuNavigation = () => {
   const [active, setActive] = useState(false);
 
-  const navigate = useNavigate();
   const location = useLocation();
 
-  function handleNavigate (path: string) {
+  const handleNavigation = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
     setActive(false);
-    navigate(path);
-  }
-  
+  };
+
   return ( 
     <NavigationContainer>
       <Icon src={menuIcon} alt="Ícone de menu" onClick={() => setActive(true)}/>
@@ -36,8 +37,8 @@ export const MenuNavigation = () => {
           {navList.map(({ label, path }, i) =>(
             <Item 
               key={i} 
-              onClick={() => handleNavigate(path)}
-              $active={path === location.pathname} 
+              $active={path === location.pathname}
+              onClick={() => handleNavigation(path)}
             >
               {label}
             </Item>
