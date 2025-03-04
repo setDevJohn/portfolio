@@ -6,7 +6,7 @@ module.exports = {
       args: "run preview",
       env: {
         NODE_ENV: "production",
-        PORT: 4999,
+        PORT: 4000,
         HOST: '0.0.0.0'
       }
     }
