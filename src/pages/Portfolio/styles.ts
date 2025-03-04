@@ -2,8 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import { sizes } from '@styles/mediaSizes';
 
 type IconProps = {
-  $left: boolean
-  $right: boolean
+  $left?: boolean
 }
 
 type SkillProps = {

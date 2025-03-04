@@ -5,7 +5,7 @@ import { CircularProgress } from '@mui/material';
 type ButtonProps = {
   text: string
   icon: string
-  type?: string
+  type?: 'button' | 'reset' | 'submit'
   style?: CSSObject
   loading?: boolean
   handleClick?: () => void

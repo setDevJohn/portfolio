@@ -57,7 +57,7 @@ export const Portfolio = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2500,
-    nextArrow: <Icon $right src={rightArrow} alt="Próximo" />,
+    nextArrow: <Icon src={rightArrow} alt="Próximo" />,
     prevArrow: <Icon $left src={leftArrow} alt="Anterior" />,
     adaptiveHeight: true
   };
@@ -80,7 +80,7 @@ export const Portfolio = () => {
               <CardProject 
                 key={name} 
                 className="card-project"
-                $active={selectedCard === name}
+                // $active={selectedCard === name}
                 onClick={() => setSelectedCard(name)}
               >
                 <ImageContainer $mobileSrc={mobile}>
@@ -97,7 +97,9 @@ export const Portfolio = () => {
                       ))}
                     </SkillList>
 
-                    <ButtonContainer $active={selectedCard === name}>
+                    <ButtonContainer 
+                      // $active={selectedCard === name}
+                    >
                       {repoLink && (
                         <PageButton href={repoLink} target="_blank">
                         Repositório

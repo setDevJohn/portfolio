@@ -2,7 +2,7 @@ import { sizes } from '@styles/mediaSizes';
 import styled from 'styled-components';
 
 type TextSpanProps = {
-  $mobileHidden: boolean;
+  $mobileHidden?: boolean;
 }
 
 export const CertificationName = styled.p`
