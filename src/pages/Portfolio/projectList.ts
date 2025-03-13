@@ -1,9 +1,11 @@
+import auth from '@assets/images/auth.png';
 import ipAddressTracker from '@assets/images/ip-address-tracker.png';
 import interactiveForm from '@assets/images/interactive-form.png';
 import githubProfile from '@assets/images/github-profile.png';
 import lavandinha from '@assets/images/lavandinha.png';
 import pokedex from '@assets/images/pokedex.png';
 import codeCafe from '@assets/images/code-cafe.png';
+import authMobile from '@assets/images/auth-mobile.png';
 import ipAddressTrackerMobile from '@assets/images/ip-address-tracker-mobile.png';
 import interactiveFormMobile from '@assets/images/interactive-form-mobile.png';
 import githubProfileMobile from '@assets/images/github-profile-mobile.png';
@@ -12,6 +14,22 @@ import pokedexMobile from '@assets/images/pokedex-mobile.png';
 import codeCafeMobile from '@assets/images/code-cafe-mobile.png';
  
 export const projectList = [
+  {
+    path: auth,
+    mobile: authMobile,
+    name: 'Projeto de autenticação',
+    repoLink: 'https://github.com/setDevJohn/frontend-auth-project',
+    backRepoLink: 'https://github.com/setDevJohn/backend-auth-project',
+    deployLink: 'https://auth.johndevstudio.com',
+    stacks: [
+      { stack: 'TS', color: '#377CC8' }, 
+      { stack: 'React', color: '#50D6FF' },
+      { stack: 'StyledComp', color: '#F267C6' },
+      { stack: 'Node', color: '#87BF00' },
+      { stack: 'Express', color: '#009A36' },
+      { stack: 'MySQL', color: '#015B85' },
+    ],
+  },
   {
     path: ipAddressTracker,
     mobile: ipAddressTrackerMobile,
