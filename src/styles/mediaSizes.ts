@@ -1,3 +1,3 @@
 export const sizes = {
-  mobile: 'max-width: 458px'
+  mobile: 'max-width: 478px'
 };
