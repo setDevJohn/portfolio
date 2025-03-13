@@ -37,10 +37,6 @@ export const CarouselContainer = styled.div.attrs<CarouselContainerProps>(({ $wi
   margin-top: 2%;
   width: 100%;
 
-  .slick-slide:not(.slick-center) .card-project {
-    filter: blur(5px);
-    opacity: 0.6;
-  }
   .slick-dots {
     bottom: -30px;
   }
@@ -51,11 +47,22 @@ export const CarouselContainer = styled.div.attrs<CarouselContainerProps>(({ $wi
   .slick-dots li.slick-active button:before {
     color: ${({ theme }) => theme.contrastColor};
   }
+  .card-project {
+    padding: 0 7px;
+  }
 
+
+  @media (min-width: 458px) {
+    .slick-slide:not(.slick-center) .card-project {
+      filter: blur(5px);
+      opacity: 0.6;
+    }    
+  }
   @media (${sizes.mobile}) {
     margin-top: 10%;
   }
 `;
+
 
 export const ImageContainer = styled.div<ImageContainerProps>`
   position: relative;

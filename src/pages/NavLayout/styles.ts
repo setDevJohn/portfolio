@@ -1,3 +1,4 @@
+import { sizes } from '@styles/mediaSizes';
 import styled, { keyframes } from 'styled-components';
 
 const slideIn = keyframes`
@@ -52,6 +53,10 @@ export const ContentContainer = styled.main`
   overflow: hidden;
   width: 100%;
   height: 100%;
+
+  @media (${sizes.mobile}) {
+    padding: 15px 0;
+  }
 `;
 
 export const TitleContainer = styled.div`

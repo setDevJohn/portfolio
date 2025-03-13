@@ -22,15 +22,19 @@ import {
 export const Portfolio = () => {
   const [selectedCard, setSelectedCard] = useState('');
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [realWindowWidth, setRealWindowWidth] = useState(window.innerWidth);
+  
 
   // Atualiza o tamanho da janela dinamicamente
   useEffect(() => {
     const handleResize = () => {
-      const windowWidth = window.innerWidth;
+      const currentWindowWidth = window.innerWidth;
+      setRealWindowWidth(currentWindowWidth);
+
       const windowUpdated = () => {
-        if (windowWidth > 768) return windowWidth;
-        if (windowWidth > 458 && windowWidth < 768) return windowWidth + 220;
-        return windowWidth + 350;
+        if (currentWindowWidth > 768) return currentWindowWidth;
+        if (currentWindowWidth > 458 && currentWindowWidth < 768) return currentWindowWidth + 220;
+        return currentWindowWidth + 550;
       };
       
       setWindowWidth(windowUpdated());
@@ -57,8 +61,8 @@ export const Portfolio = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2500,
-    nextArrow: <Icon src={rightArrow} alt="Próximo" />,
-    prevArrow: <Icon $left src={leftArrow} alt="Anterior" />,
+    nextArrow: realWindowWidth > 458 ? <Icon src={rightArrow} alt="Próximo" /> : <></>,
+    prevArrow: realWindowWidth > 458 ?  <Icon $left src={leftArrow} alt="Anterior" /> : <></>,
     adaptiveHeight: true
   };
 
@@ -71,6 +75,7 @@ export const Portfolio = () => {
               path,
               name,
               repoLink,
+              backRepoLink,
               deployLink,
               stacks,
               mobile
@@ -102,12 +107,18 @@ export const Portfolio = () => {
                     >
                       {repoLink && (
                         <PageButton href={repoLink} target="_blank">
-                        Repositório
+                          {backRepoLink? 'Rep. Frontend' : 'Repositório'}
+                        </PageButton>
+                      )}
+
+                      {backRepoLink && (
+                        <PageButton href={backRepoLink} target="_blank">
+                          Rep. Backend
                         </PageButton>
                       )}
 
                       <PageButton href={deployLink} target="_blank">
-                      Deploy
+                        Deploy
                       </PageButton>
                     </ButtonContainer>
                   </CardFooter>
