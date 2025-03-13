@@ -7,7 +7,7 @@ export const cardList = [
     icon: frontIcon,
     title: 'Frontend',
     text: 'Desenvolvimento de interfaces web interativas e responsivas para uma experiência do usuário de alta qualidade.',
-    desc: 'Ofereço serviços especializados em desenvolvimento frontend, garantindo que suas páginas web sejam modernas, funcionais e esteticamente agradáveis. Utilizo as melhores práticas de design responsivo para assegurar que sua aplicação seja acessível em diversos dispositivos e navegadores. Trabalho com tecnologias como HTML, CSS, JavaScript, e frameworks como React, Angular ou Vue.js, para criar interfaces dinâmicas e intuitivas. Meu foco é traduzir ideias e requisitos em experiências visuais impactantes e eficientes.'
+    desc: 'Ofereço serviços especializados em desenvolvimento frontend, garantindo que suas páginas web sejam modernas, funcionais e esteticamente agradáveis. Utilizo as melhores práticas de design responsivo para assegurar que sua aplicação seja acessível em diversos dispositivos e navegadores. Trabalho com tecnologias como HTML, CSS, JavaScript, e frameworks como React ou Vue.js, para criar interfaces dinâmicas e intuitivas. Meu foco é traduzir ideias e requisitos em experiências visuais impactantes e eficientes.'
   },
   {
     icon: backIcon,
