@@ -121,6 +121,8 @@ export const CardTitle = styled.p`
 export const CardFooter = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
   width: 100%;
 
   @media (${sizes.mobile}) {
@@ -132,7 +134,6 @@ export const CardFooter = styled.div`
 export const SkillList = styled.ul`
   display: flex;
   gap: 8px;
-  width: 100%;
 `;
 export const Skill = styled.li<SkillProps>`
   font-size: 1.5rem;
@@ -142,6 +143,7 @@ export const Skill = styled.li<SkillProps>`
 export const ButtonContainer = styled.div`
   display: flex;
   gap: 20px;
+  margin-left: auto;
 `;
 export const PageButton = styled.a`
   display: flex;
