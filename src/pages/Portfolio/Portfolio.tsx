@@ -20,11 +20,12 @@ import {
 } from './styles';
 
 export const Portfolio = () => {
-  const [selectedCard, setSelectedCard] = useState('');
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [realWindowWidth, setRealWindowWidth] = useState(window.innerWidth);
   
   const { theme } = useContext(ThemeContext);
+  
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   // Atualiza o tamanho da janela dinamicamente
   useEffect(() => {
@@ -88,8 +89,6 @@ export const Portfolio = () => {
               <CardProject 
                 key={name} 
                 className="card-project"
-                // $active={selectedCard === name}
-                onClick={() => setSelectedCard(name)}
               >
                 <ImageContainer $mobileSrc={mobile}>
                   <ProjectImage src={path} alt={`project ${name}`}/>

@@ -16,6 +16,7 @@ export const NavLayout = () => {
   const title = navList.find(({ path }) => path === location.pathname)?.label;
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setTimeout(() => setSideBar(false), 1000);
   },[]);
 

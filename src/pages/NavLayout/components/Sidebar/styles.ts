@@ -27,6 +27,11 @@ export const Icon = styled.div`
   position: absolute;
   right: 15px;
   top: 15px;
+  display: none;
+
+  @media (${sizes.mobile}) {
+    display: block;
+  }
 `;
 
 export const ImageContainer = styled.div`

@@ -5,7 +5,7 @@ export const MobileHeaderContainer = styled.div<{$open : boolean}>`
   position: absolute;
   inset: 0;
   z-index: 1;
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   background-color: ${({ theme }) => theme.mainColor};
@@ -15,6 +15,7 @@ export const MobileHeaderContainer = styled.div<{$open : boolean}>`
   width: 100%;
 
   @media (${sizes.mobile}) {
+    display: flex;
     transform: ${({ $open }) => `translateY(${$open ? '0%' : '-100%'})`};
     transition: transform 1s ease;
     transition-delay: ${({ $open }) => $open ? '.5s' : '0s'};

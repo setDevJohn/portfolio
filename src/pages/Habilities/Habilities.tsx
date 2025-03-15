@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { SkillList } from './componets';
 import jsIcon from '@assets/images/javascript.png';
 import tsIcon from '@assets/images/typescript.png';
@@ -7,6 +8,8 @@ import { PageContainer } from '@styles/pageStyle';
 import { ImageContainer, SkillIcon, TextSpan } from './styles';
 
 export const Habilities = () => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   const imageList = [
     { path: jsIcon, name: 'JS', animation: 'swing' },
     { path: reactIcon, name: 'React', animation: 'rotate' },

@@ -1,4 +1,5 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
 import { PageContainer } from '@styles/pageStyle';
 import { cardList } from './cardList';
 import { 
@@ -11,11 +12,12 @@ import {
   ServiceTitle, 
   Title 
 } from './styles';
-import { ThemeContext } from '@context/ThemeContext';
 
 export const Services = () => {
   const [selectedCard, setSelectedCard] = useState('Frontend');
   const { theme } = useContext(ThemeContext);
+
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <PageContainer>
