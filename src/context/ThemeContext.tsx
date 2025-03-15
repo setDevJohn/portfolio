@@ -28,8 +28,10 @@ const themeColor = {
   },
 };
 
+const localTheme = localStorage.getItem('theme');
+
 const ThemeContext = createContext({
-  theme: themeColor.dark,
+  theme: themeColor[localTheme === 'light' ? 'light' : 'dark'],
   handleChangeTheme: () => {}
 });
 
@@ -39,12 +41,13 @@ type ThemeProviderProps = {
 
 const ThemeColorProvider = ({ children } : ThemeProviderProps) => {
 
-  const [theme, setTheme] = useState(themeColor.dark);
+  const [theme, setTheme] = useState(themeColor[localTheme === 'light' ? 'light' : 'dark']);
 
   const handleChangeTheme = () => {
     const currentTheme = theme === themeColor.dark
       ? themeColor.light : themeColor.dark;
 
+    localStorage.setItem('theme', currentTheme.textColor === '#FFFFFF' ? 'dark' : 'light');
     setTheme(currentTheme);
   };
 

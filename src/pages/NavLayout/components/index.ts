@@ -1,4 +1,4 @@
 import { MenuNavigation } from './MenuNavigation/MenuNavigation';
-import { Profile } from './Profile/Profile';
+import { SideBar } from './Sidebar/SideBar';
 
-export { MenuNavigation, Profile };
+export { MenuNavigation, SideBar };

@@ -21,6 +21,7 @@ const widthTitle = keyframes`
 `;
 
 export const LayoutContainer = styled.div`
+  position: relative;
   display: flex;
   box-shadow: 0 0 19px #0003;
   margin: 0 auto;
@@ -40,7 +41,7 @@ export const ContentContainer = styled.main`
   background-color: ${({ theme }) => theme.primaryColor};
 
   @media (${sizes.mobile}) {
-    padding: 15px 0;
+    padding: 60px 15px 15px 15px;
   }
 `;
 
@@ -56,7 +57,7 @@ export const PageTitle = styled.h2`
   font-weight: 500;
   width: fit-content;
   animation: ${slideIn} 0.6s ease forwards;
-  margin-left: 30px;
+  margin-left: 13px;
 
   &::after {
     content: '';
