@@ -62,7 +62,7 @@ export const TimeLineItem = styled.div`
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.mainColor};
+    background-color: ${({ theme }) => theme.primaryColor};
     border: ${({ theme }) => `${theme.contrastColor} 3px solid`};
   }
 

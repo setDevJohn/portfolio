@@ -33,10 +33,11 @@ export const InputGroup = styled.div`
   animation: ${zoom} 0.8s ease-in-out forwards;
 `;
 export const SocialInput = styled.input<InputProps>`
-  background-color: ${({ theme }) => theme.primaryColor};
+  background-color: ${({ theme }) => theme.secondaryColor};
+  color: ${({ theme }) => theme.textColor};
   font-size: 1.7rem;
   border-radius: 7px;
-  box-shadow: 2px 2px 4px #0008;
+  box-shadow: 1px 2px 7px -2px #0004;
   padding: 12px 19px;
   border: none;
   outline: ${({ $error }) => $error ? '1px solid #7d0c0c' : 'none'};
@@ -44,7 +45,7 @@ export const SocialInput = styled.input<InputProps>`
   animation: ${zoom} 0.8s ease-in-out forwards;
 
   &::placeholder {
-    color: #fff;
+    color: ${({ theme }) => theme.textColor};
   }
 `;
 export const ErrorSpan = styled.span<ErrorSpanProps>`
@@ -54,10 +55,11 @@ export const ErrorSpan = styled.span<ErrorSpanProps>`
   margin-left: 4px;
 `;
 export const SocialTextArea = styled.textarea<InputProps>`
-  background-color: ${({ theme }) => theme.primaryColor};
+  background-color: ${({ theme }) => theme.secondaryColor};
+  color: ${({ theme }) => theme.textColor};
   font-size: 1.7rem;
   border-radius: 7px;
-  box-shadow: 1px 2px 4px #0007;
+  box-shadow: 1px 2px 7px -2px #0004;
   border: none;
   outline: ${({ $error }) => $error ? '1px solid #7d0c0c' : 'none'};
   padding: 12px 19px;
@@ -67,6 +69,6 @@ export const SocialTextArea = styled.textarea<InputProps>`
   margin-bottom: 6px;
 
   &::placeholder {
-    color: #fff;
+    color: ${({ theme }) => theme.textColor};
   }
 `;

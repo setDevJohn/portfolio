@@ -40,4 +40,3 @@ export const SocialLink = styled.a`
     ${opacity} 1s ease forwards,
     ${balance} 1.3s ease infinite;
 `;
-export const SocialIcon = styled.img``;

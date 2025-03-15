@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
+import { MdArrowBackIos } from 'react-icons/md';
+import { MdArrowForwardIos } from 'react-icons/md';
 import Slider from 'react-slick';
 import { projectList } from './projectList';
 import { PageContainer } from '@styles/pageStyle';
-import leftArrow from '@assets/icons/left.svg';
-import rightArrow from '@assets/icons/right.svg';
 import { 
   ButtonContainer,
   CardFooter,
   CardProject, 
   CardTitle, 
   CarouselContainer, 
-  Icon, 
   ImageContainer, 
   InfoContainer, 
   PageButton, 
@@ -24,6 +24,7 @@ export const Portfolio = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [realWindowWidth, setRealWindowWidth] = useState(window.innerWidth);
   
+  const { theme } = useContext(ThemeContext);
 
   // Atualiza o tamanho da janela dinamicamente
   useEffect(() => {
@@ -61,8 +62,10 @@ export const Portfolio = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2500,
-    nextArrow: realWindowWidth > 458 ? <Icon src={rightArrow} alt="Próximo" /> : <></>,
-    prevArrow: realWindowWidth > 458 ?  <Icon $left src={leftArrow} alt="Anterior" /> : <></>,
+    nextArrow: realWindowWidth > 458 
+      ? <MdArrowForwardIos fill={theme.contrastColor} /> : <></>,
+    prevArrow: realWindowWidth > 458 
+      ?  <MdArrowBackIos fill={theme.contrastColor}/> : <></>,
     adaptiveHeight: true
   };
 

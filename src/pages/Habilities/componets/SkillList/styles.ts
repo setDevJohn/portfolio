@@ -48,7 +48,7 @@ export const SkillLabel = styled.p`
 export const ProgressContainer = styled.div`
   display: flex;
   width: 100%;
-  height: 18px;
+  height: 21px;
   overflow: hidden;
 `;
 export const ProgressBar = styled.div<ProgressBarProps>`
@@ -69,6 +69,6 @@ export const SpanProgress = styled.span`
   animation: ${opacityAnimation} 1.2s ease forwards;
   animation-delay: 1s;
   color: #000;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 500;
 `;

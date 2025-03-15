@@ -20,39 +20,24 @@ const widthTitle = keyframes`
   }
 `;
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: ${({ theme }) => theme.mainColor};
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-`;
-
 export const LayoutContainer = styled.div`
   display: flex;
-  flex: 1;
+  box-shadow: 0 0 19px #0003;
+  margin: 0 auto;
   max-width: 1900px;
   width: 100%;
+  height: 100vh;
 `;
-
-export const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 20px;
-  flex: 1;
-`;  
 
 export const ContentContainer = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 15px 25px;
-  overflow: hidden;
+  padding: 25px 25px 15px 25px;
+  overflow: auto;
   width: 100%;
   height: 100%;
+  background-color: ${({ theme }) => theme.primaryColor};
 
   @media (${sizes.mobile}) {
     padding: 15px 0;
@@ -66,12 +51,12 @@ export const TitleContainer = styled.div`
   height: 38px;
 `;
 
-export const PageTitle = styled.h1`
+export const PageTitle = styled.h2`
   font-size: 2.5rem;
   font-weight: 500;
-  overflow: hidden;
   width: fit-content;
   animation: ${slideIn} 0.6s ease forwards;
+  margin-left: 30px;
 
   &::after {
     content: '';

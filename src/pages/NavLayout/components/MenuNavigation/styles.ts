@@ -8,7 +8,7 @@ type NavProps = {
   $open: boolean;
 }
 
-export const NavigationContainer = styled.header`
+export const NavigationContainer = styled.nav`
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
@@ -29,7 +29,8 @@ export const Icon = styled.img`
   }
 `;
 
-export const Nav = styled.nav<NavProps>`
+export const Nav = styled.div<NavProps>`
+  width: 100%;
   @media (${sizes.mobile}) {
     position: fixed;
     z-index: 1;
@@ -47,25 +48,31 @@ export const Nav = styled.nav<NavProps>`
 
 export const NavigationList = styled.ul`
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
 
   @media (${sizes.mobile}) {
-    flex-direction: column;
     margin: 18px 15px;
     gap: 25px;
   }
 `;
 
 export const Item = styled.li<ItemProps>`
-  font-size: 1.9rem;
-  font-weight: ${({ $active }) => $active ? 500 : 400};
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.8rem;
+  background-color: ${({ $active, theme }) => $active && theme.contrastBgColor};
   color: ${({ $active, theme }) => $active && theme.contrastColor};
   cursor: pointer;
-  padding: 2px 4px;
-  transition: 0.4s ease-in-out;
+  transition: background-color 0.4s ease;
+  border-radius: 3px;
+  padding: 4px 7px;
+  width: 100%;
 
   &:hover {
-    transform: translateY(-2px);
+    background-color: ${({ $active, theme }) => !$active && theme.grayColor};
   }
 
   @media (${sizes.mobile}) {

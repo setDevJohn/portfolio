@@ -1,10 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { sizes } from '@styles/mediaSizes';
 
-type IconProps = {
-  $left?: boolean
-}
-
 type SkillProps = {
   $color: string
 }
@@ -63,7 +59,6 @@ export const CarouselContainer = styled.div.attrs<CarouselContainerProps>(({ $wi
   }
 `;
 
-
 export const ImageContainer = styled.div<ImageContainerProps>`
   position: relative;
   display: flex;
@@ -93,16 +88,11 @@ export const ProjectImage = styled.img`
   max-height: 100%;
   object-fit: cover;
 `;
-export const Icon = styled.img<IconProps>`
-  transform: ${({ $left }) => `translate(${$left ? '-' : ''}15px, -25px)`};
-  width: 40px;
-  height: 40px;
-`;
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: ${({ theme }) => theme.primaryColor};
+  background-color: ${({ theme }) => theme.secondaryColor};
   border-radius: 4px;
   padding: 10px 20px;
   margin: 0 auto;
@@ -151,7 +141,7 @@ export const PageButton = styled.a`
   color: #000;
   font-size: 1.6rem;
   font-weight: 500;
-  box-shadow: 2px 2px 4px #0008;
+  box-shadow: 1px 2px 7px -2px #0004;
   border-radius: 5px;
   padding: 4px 13px;
 

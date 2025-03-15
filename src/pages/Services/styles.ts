@@ -27,13 +27,13 @@ export const CardServices = styled.div<CardServicesProps>`
   display: flex;
   align-items: center;
   gap: 25px;
-  background-color: ${({ theme }) => theme.primaryColor};
+  background-color: ${({ theme }) => theme.secondaryColor};
   border-radius: 10px;
   padding: 16px;
   width: 100%;
   transition: all 0.6s ease;
   box-shadow: ${({ $selected, theme }) => (
-    `0px 2px 11px -3px ${$selected ? theme.contrastColor : '#0008'}`
+    `1px 2px 7px -2px ${$selected ? theme.contrastColor : '#0004'}`
   )};
   min-width: 200px;
   max-width: 285px;
@@ -54,7 +54,6 @@ export const CardText = styled.p`
   line-height: 18px;
   font-size: 1.4rem;
 `;
-export const CardIcon = styled.img``;
 export const DescContainer = styled.div`
   display: flex;
   flex-direction: column;

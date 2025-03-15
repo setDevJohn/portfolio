@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.mainColor};
+    background-color: ${({ theme }) => theme.primaryColor};
   }
 
   html {

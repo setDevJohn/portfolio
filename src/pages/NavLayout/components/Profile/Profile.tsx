@@ -1,8 +1,21 @@
-import { SocialMedia } from '../index';
+import { useContext } from 'react';
+import { ThemeContext } from '@context/ThemeContext';
+import { MenuNavigation } from '../index';
+import { ToggleButton } from '@components/ToggleButton';
 import profile from '@assets/images/animated-jhony.png';
-import { ImageContainer, ProfileContainer, ProfileImage, Title } from './styles';
+import { 
+  FooterSideBar,
+  ImageContainer,
+  ProfileContainer,
+  ProfileImage,
+  SubTitle,
+  Title,
+} from './styles';
+
 
 export const Profile = () => {
+  const { theme, handleChangeTheme } = useContext(ThemeContext);
+
   return (
     <ProfileContainer>
       <ImageContainer>
@@ -10,8 +23,17 @@ export const Profile = () => {
       </ImageContainer>
 
       <Title>Jhony Freitas</Title>
+      <SubTitle>Desenvolvedor Fullstack</SubTitle>
 
-      <SocialMedia />
+      {/* <SocialMedia /> */}
+      <MenuNavigation />
+
+      <FooterSideBar>
+        <ToggleButton 
+          handleClick={handleChangeTheme}
+          checked={theme.textColor !== '#FFFFFF'} 
+        />
+      </FooterSideBar>
     </ProfileContainer>
   );
 };

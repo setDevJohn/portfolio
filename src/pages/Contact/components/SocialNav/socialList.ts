@@ -1,13 +1,15 @@
-import whats from '@assets/icons/whatsapp.svg';
-import mail from '@assets/icons/mail-contact.svg';
-import github from '@assets/icons/github.svg';
-import linkedin from '@assets/icons/linkedin-contact.svg';
+import { BsWhatsapp } from 'react-icons/bs';
+import { FaGithub } from 'react-icons/fa';
+import { MdOutlineEmail } from 'react-icons/md';
+import { FaLinkedinIn } from 'react-icons/fa6';
+
+
 // import workana from '@assets/icons/workana.svg';
 
 export const socialList = [
-  { icon: github, link: 'https://github.com/setdevjohn' },
-  { icon: whats, link: 'https://wa.me/5511948127577' },
-  { icon: mail, link: 'mailto:setdevjohn@gmail.com' },
+  { icon: FaGithub, link: 'https://github.com/setdevjohn' },
+  { icon: MdOutlineEmail, link: 'mailto:setdevjohn@gmail.com' },
+  { icon: BsWhatsapp, link: 'https://wa.me/5511948127577' },
+  { icon: FaLinkedinIn, link: 'https://www.linkedin.com/in/jhony-freitas/' },
   // { icon: workana, link: null },
-  { icon: linkedin, link: 'https://www.linkedin.com/in/jhony-freitas/' },
 ];

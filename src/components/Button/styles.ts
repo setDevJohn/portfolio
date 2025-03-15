@@ -10,12 +10,10 @@ export const ButtonContainer = styled.button`
   font-weight: 600;
   padding: 7px 8px 7px 18px;
   border-radius: 7px;
+  box-shadow: 1px 2px 7px -2px #0004;
   transition: transform 0.3s ease-out;
   cursor: pointer;
   
-  &:hover {
-    box-shadow: 2px 2px 8px 2px #0009;
-  }
   &:active {
     transform: scale(0.95);
   }

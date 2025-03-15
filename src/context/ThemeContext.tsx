@@ -1,35 +1,44 @@
 import { createContext, ReactNode, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-const ThemeContext = createContext({});
+const themeColor = {
+  dark : {
+    mainColor: '#171717',
+    contrastColor: '#2AD883',
+    contrastBgColor: '#445e48',
+    textColor: '#FFFFFF',
+    primaryColor: '#212121',
+    secondaryColor: '#2a2a2a',
+    grayColor: '#2b2b2b',
+    grayFont: '#7e7e7e',
+    primaryFont: '"Poppins", serif',
+    secondaryFont:  '"DM Mono", serif',
+  },
+  light: {
+    mainColor: '#F9F9F9',
+    contrastColor: '#0073E6',
+    contrastBgColor: '#c5c7ff',
+    textColor: '#1A1A1A',
+    primaryColor: '#E0E0E0',
+    secondaryColor: '#CFCFCF',
+    grayColor: '#e8e8e8',
+    grayFont: '#7e7e7e',
+    primaryFont: '"Poppins", serif',
+    secondaryFont:  '"DM Mono", serif',
+  },
+};
+
+const ThemeContext = createContext({
+  theme: themeColor.dark,
+  handleChangeTheme: () => {}
+});
 
 type ThemeProviderProps = {
   children: ReactNode
 }
 
 const ThemeColorProvider = ({ children } : ThemeProviderProps) => {
-  const themeColor = {
-    dark : {
-      mainColor: '#070707',
-      contrastColor: '#2AD883',
-      textColor: '#FFFFFF',
-      primaryColor: '#161616',
-      secondaryColor: '#232323',
-      strokeColor: '#141414',
-      primaryFont: '"Poppins", serif',
-      secondaryFont:  '"DM Mono", serif',
-    },
-    light: {
-      mainColor: '#F9F9F9',
-      contrastColor: '#0073E6',
-      textColor: '#1A1A1A',
-      primaryColor: '#E0E0E0',
-      secondaryColor: '#CFCFCF',
-      strokeColor: '#D1D1D1',
-      primaryFont: '"Poppins", serif',
-      secondaryFont:  '"DM Mono", serif',
-    },
-  };
+
   const [theme, setTheme] = useState(themeColor.dark);
 
   const handleChangeTheme = () => {
