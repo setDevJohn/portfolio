@@ -19,7 +19,7 @@ export const About = () => {
     <PageContainer>
       <ImageContainer>
         <Text>
-        Desenvolvedor Full Stack com experiência desde 2022, atuando em projetos freelance e como desenvolvedor júnior. Atualmente cursando Análise e Desenvolvimento de Sistemas, com conclusão prevista para 2025. Especialista em React, TypeScript e JavaScript, com forte domínio na criação de interfaces dinâmicas e responsivas e sólida experiência em integração com APIs. Conhecimento prático em tecnologias como Node.js, Express, Prisma e MySQL. Focado em criar soluções modernas e eficientes, com atenção à qualidade do código, experiência do usuário e as melhores práticas de desenvolvimento.
+        Desenvolvedor Full Stack, atualmente cursando Análise e Desenvolvimento de Sistemas (conclusão prevista para final de 2025). Possuo experiência prática em desenvolvimento web e amplo conhecimento em tecnologias como TypeScript, React, Express, Prisma, entre outras. Meu foco é criar soluções práticas e essenciais, sempre com atenção à qualidade do código e à experiência do usuário, transformando necessidades em soluções inovadoras.
         </Text>
 
         <Photo src={jhonyPhoto} alt="Image do Jhony"/>
