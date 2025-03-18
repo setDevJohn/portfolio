@@ -104,9 +104,7 @@ export const Portfolio = () => {
                       ))}
                     </SkillList>
 
-                    <ButtonContainer 
-                      // $active={selectedCard === name}
-                    >
+                    <ButtonContainer>
                       {repoLink && (
                         <PageButton href={repoLink} target="_blank">
                           {backRepoLink? 'Rep. Frontend' : 'Repositório'}

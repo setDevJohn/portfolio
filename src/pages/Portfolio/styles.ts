@@ -117,7 +117,6 @@ export const CardFooter = styled.div`
 
   @media (${sizes.mobile}) {
     flex-direction: column;
-    align-items: center;
     gap: 10px;
   }
 `;
