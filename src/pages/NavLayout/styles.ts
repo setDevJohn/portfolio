@@ -1,5 +1,5 @@
-import { sizes } from '@styles/mediaSizes';
-import styled, { keyframes } from 'styled-components';
+import { sizes } from "@styles/mediaSizes";
+import styled, { keyframes } from "styled-components";
 
 const slideIn = keyframes`
   0% {
@@ -25,7 +25,6 @@ export const LayoutContainer = styled.div`
   display: flex;
   box-shadow: 0 0 19px #0003;
   margin: 0 auto;
-  max-width: 1900px;
   width: 100%;
   height: 100vh;
 `;
@@ -48,7 +47,7 @@ export const ContentContainer = styled.main`
 export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 100% ;
+  width: 100%;
   height: 38px;
 `;
 
@@ -60,7 +59,7 @@ export const PageTitle = styled.h2`
   margin-left: 13px;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     height: 3px;
     background-color: ${({ theme }) => theme.contrastColor};

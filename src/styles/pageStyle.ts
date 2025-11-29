@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PageContainer = styled.section`
   display: flex;
@@ -7,4 +7,6 @@ export const PageContainer = styled.section`
   width: 100%;
   flex: 1;
   padding: 15px 0;
+  margin: auto;
+  max-width: 1635px;
 `;
